@@ -1,10 +1,9 @@
-# :package_description
+# 
 
-[![Latest Version on Packagist](https://img.shields.io/packagist/v/spatie/:package_name.svg?style=flat-square)](https://packagist.org/packages/spatie/:package_name)
-[![GitHub Tests Action Status](https://img.shields.io/github/workflow/status/spatie/:package_name/run-tests?label=tests)](https://github.com/spatie/:package_name/actions?query=workflow%3Arun-tests+branch%3Amaster)
-[![Total Downloads](https://img.shields.io/packagist/dt/spatie/:package_name.svg?style=flat-square)](https://packagist.org/packages/spatie/:package_name)
+[![Latest Version on Packagist](https://img.shields.io/packagist/v/spatie/laravel-disk-monitor-package.svg?style=flat-square)](https://packagist.org/packages/spatie/laravel-disk-monitor-package)
+[![GitHub Tests Action Status](https://img.shields.io/github/workflow/status/spatie/laravel-disk-monitor-package/run-tests?label=tests)](https://github.com/spatie/laravel-disk-monitor-package/actions?query=workflow%3Arun-tests+branch%3Amaster)
+[![Total Downloads](https://img.shields.io/packagist/dt/spatie/laravel-disk-monitor-package.svg?style=flat-square)](https://packagist.org/packages/spatie/laravel-disk-monitor-package)
 
-**Note:** Replace ```:author_name``` ```:author_username``` ```:author_email``` ```:package_name``` ```:package_description``` with their correct values in [README.md](README.md), [CHANGELOG.md](CHANGELOG.md), [CONTRIBUTING.md](CONTRIBUTING.md), [LICENSE.md](LICENSE.md) and [composer.json](composer.json) files, then delete this line. You can also run `configure-skeleton.sh` to do this automatically.
 
 This is where your description should go. Limit it to a paragraph or two. Consider adding a small example.
 
@@ -29,13 +28,13 @@ composer require spatie/package-skeleton-laravel
 You can publish and run the migrations with:
 
 ```bash
-php artisan vendor:publish --provider="Spatie\Skeleton\SkeletonServiceProvider" --tag="migrations"
+php artisan vendor:publish --provider="Spatie\DiskMonitor\SkeletonServiceProvider" --tag="migrations"
 php artisan migrate
 ```
 
 You can publish the config file with:
 ```bash
-php artisan vendor:publish --provider="Spatie\Skeleton\SkeletonServiceProvider" --tag="config"
+php artisan vendor:publish --provider="Spatie\DiskMonitor\SkeletonServiceProvider" --tag="config"
 ```
 
 This is the contents of the published config file:
@@ -48,7 +47,7 @@ return [
 ## Usage
 
 ``` php
-$skeleton = new Spatie\Skeleton();
+$skeleton = new Spatie\DiskMonitor();
 echo $skeleton->echoPhrase('Hello, Spatie!');
 ```
 
@@ -72,7 +71,7 @@ If you discover any security related issues, please email freek@spatie.be instea
 
 ## Credits
 
-- [:author_name](https://github.com/:author_username)
+- [ElijahCoding](https://github.com/ElijahCoding)
 - [All Contributors](../../contributors)
 
 ## License
