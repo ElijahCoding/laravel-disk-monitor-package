@@ -4,7 +4,7 @@ namespace Spatie\DiskMonitor;
 
 use Illuminate\Support\ServiceProvider;
 use Spatie\DiskMonitor\Commands\DiskMonitorCommand;
-use Spatie\DiskMonitor\Commands\RecordDiskMetrics;
+use Spatie\DiskMonitor\Commands\RecordDiskMetricsCommand;
 
 class DiskMonitorServiceProvider extends ServiceProvider
 {
@@ -26,7 +26,7 @@ class DiskMonitorServiceProvider extends ServiceProvider
             }
 
             $this->commands([
-                RecordDiskMetrics::class,
+                RecordDiskMetricsCommand::class,
             ]);
         }
 
