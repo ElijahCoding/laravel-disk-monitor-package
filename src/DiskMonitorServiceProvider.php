@@ -24,7 +24,7 @@ class DiskMonitorServiceProvider extends ServiceProvider
 
     protected function registerPublishables(): self
     {
-        if (!$this->app->runningInConsole()) {
+        if (! $this->app->runningInConsole()) {
             return $this;
         }
 
@@ -36,7 +36,7 @@ class DiskMonitorServiceProvider extends ServiceProvider
             __DIR__ . '/../resources/views' => base_path('resources/views/vendor/disk-monitor'),
         ], 'views');
 
-        if (!class_exists('CreatePackageTable')) {
+        if (! class_exists('CreatePackageTable')) {
             $this->publishes([
                 __DIR__ . '/../database/migrations/create_disk_monitor_table.php.stub' => database_path('migrations/' . date('Y_m_d_His', time()) . '_create_disk_monitor_table.php'),
             ], 'migrations');
@@ -47,7 +47,7 @@ class DiskMonitorServiceProvider extends ServiceProvider
 
     protected function registerCommands(): self
     {
-        if (!$this->app->runningInConsole()) {
+        if (! $this->app->runningInConsole()) {
             return $this;
         }
 
