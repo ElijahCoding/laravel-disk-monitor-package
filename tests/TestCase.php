@@ -2,6 +2,7 @@
 
 namespace Spatie\DiskMonitor\Tests;
 
+use Illuminate\Support\Facades\Route;
 use Orchestra\Testbench\TestCase as Orchestra;
 use Spatie\DiskMonitor\DiskMonitorServiceProvider;
 
@@ -12,6 +13,8 @@ class TestCase extends Orchestra
         parent::setUp();
 
         $this->withFactories(__DIR__.'/database/factories');
+
+        Route::diskMonitor('disk-monitor');
     }
 
     protected function getPackageProviders($app)

@@ -2,8 +2,10 @@
 
 namespace Spatie\DiskMonitor;
 
+use Illuminate\Support\Facades\Route;
 use Illuminate\Support\ServiceProvider;
 use Spatie\DiskMonitor\Commands\RecordDiskMetricsCommand;
+use Spatie\DiskMonitor\Http\Controllers\DiskMetricsController;
 
 class DiskMonitorServiceProvider extends ServiceProvider
 {
@@ -28,6 +30,12 @@ class DiskMonitorServiceProvider extends ServiceProvider
                 RecordDiskMetricsCommand::class,
             ]);
         }
+
+        Route::macro('diskMonitor', function (string $prefix) {
+            Route::prefix($prefix)->group(function () {
+                Route::get('/', DiskMetricsController::class);
+            });
+        });
 
         $this->loadViewsFrom(__DIR__.'/../resources/views', 'disk-monitor');
     }
