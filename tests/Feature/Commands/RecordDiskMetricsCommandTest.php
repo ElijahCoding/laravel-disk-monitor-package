@@ -28,6 +28,5 @@ class RecordDiskMetricsCommandTest extends TestCase
             ->assertExitCode(0);
         $entry = DiskMonitorEntry::last();
         $this->assertEquals(1, $entry->file_count);
-
     }
 }
