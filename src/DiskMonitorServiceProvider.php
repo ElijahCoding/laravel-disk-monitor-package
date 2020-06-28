@@ -3,8 +3,12 @@
 namespace Spatie\DiskMonitor;
 
 use Illuminate\Support\ServiceProvider;
+<<<<<<< HEAD
 use Spatie\DiskMonitor\Commands\DiskMonitorCommand;
 use Spatie\DiskMonitor\Commands\RecordDiskMetricsCommand;
+=======
+use Spatie\DiskMonitor\Commands\RecordDiskMetrics;
+>>>>>>> 8a237b424a65b538cf45b73c876b108ae9527ff9
 
 class DiskMonitorServiceProvider extends ServiceProvider
 {
